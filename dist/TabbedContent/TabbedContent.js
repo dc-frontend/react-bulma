@@ -117,7 +117,7 @@ exports.TabbedContent = TabbedContent;
 TabbedContent.propTypes = {
   content: _propTypes["default"].arrayOf(_propTypes["default"].shape({
     title: _propTypes["default"].string.isRequired,
-    content: _propTypes["default"].string.isRequired
+    content: _propTypes["default"].any.isRequired
   }))
 };
 TabbedContent.__docgenInfo = {
@@ -163,7 +163,7 @@ TabbedContent.__docgenInfo = {
               "required": true
             },
             "content": {
-              "name": "string",
+              "name": "any",
               "required": true
             }
           }
