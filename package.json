@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/davidcraig/react-bulma.git"
+    "url": "git+https://github.com/dc-frontend/react-bulma.git"
   },
   "keywords": [
     "React",
