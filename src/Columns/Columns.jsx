@@ -19,10 +19,12 @@ Columns.propTypes = {
  * @param {*} props
  */
 export function Column (props) {
-  return <div className='column'>
+  const classes = props.class ? `column ${props.class}` : 'column'
+  return <div className={classes}>
     {props.children}
   </div>
 }
 Column.propTypes = {
-  children: PropTypes.any
+  children: PropTypes.any,
+  class: PropTypes.any
 }
