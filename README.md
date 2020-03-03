@@ -1,12 +1,14 @@
-# React Components
+# React Bulma Components
 
-A modular set of reusable react components, some generic and some specific to given ui frameworks (eg. bootstrap/bulma, etc).
+A set of bulma specific react js components
 
-![Components: 0](https://img.shields.io/badge/components-0-orange)
+![Components: 5](https://img.shields.io/badge/components-5-orange)
 
 ## Components
 
  * Bulma
+   - Breadcrumbs
    - Card
-   - TabbedContent
+   - Columns
    - Navbar
+   - TabbedContent
