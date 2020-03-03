@@ -62,7 +62,7 @@ TabbedContent.propTypes = {
   content: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string.isRequired,
-      content: PropTypes.string.isRequired
+      content: PropTypes.any.isRequired
     })
   )
 }
