@@ -1,6 +1,6 @@
 {
   "name": "@davidcraig/react-bulma",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Reusable unit tested react components for bulma css framework",
   "main": "main.js",
   "scripts": {
