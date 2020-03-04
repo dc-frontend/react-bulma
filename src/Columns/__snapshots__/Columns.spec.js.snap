@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`It renders as expected 1`] = `
+<div
+  className="columns"
+>
+  <div
+    className="column"
+  >
+    I am col 1
+  </div>
+  <div
+    className="column"
+  >
+    I am col 2
+  </div>
+  <div
+    className="column"
+  >
+    I am col 3
+  </div>
+</div>
+`;
