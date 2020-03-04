@@ -1,5 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Column can have custom class passed through 1`] = `
+<div
+  className="columns"
+>
+  <div
+    className="column is-one-third"
+  >
+    I am col 1
+  </div>
+</div>
+`;
+
 exports[`It renders as expected 1`] = `
 <div
   className="columns"
