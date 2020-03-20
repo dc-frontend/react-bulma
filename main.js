@@ -3,6 +3,15 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+Object.defineProperty(exports, "ItemGrid", {
+  enumerable: true,
+  get: function get() {
+    return _ItemGrid.ItemGrid;
+  }
+});
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 Object.defineProperty(exports, "Card", {
   enumerable: true,
   get: function get() {
@@ -76,12 +85,9 @@ Object.defineProperty(exports, "TabbedContent", {
   }
 });
 
-var _Card = require("./dist/Card/Card");
-
 var _Breadcrumbs = require("./dist/Breadcrumbs/Breadcrumbs");
-
+var _Card = require("./dist/Card/Card");
 var _Columns = require("./dist/Columns/Columns");
-
+var _ItemGrid = require("./dist/ItemGrid/ItemGrid");
 var _Navbar = require("./dist/Navbar/Navbar");
-
 var _TabbedContent = require("./dist/TabbedContent/TabbedContent");
