@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`It renders as expected with no content 1`] = `
+<div
+  className="item-grid "
+>
+  <h1 />
+  <div
+    className="columns"
+  >
+    <div
+      className="column"
+    />
+    <div
+      className="column"
+    />
+    <div
+      className="column"
+    />
+  </div>
+</div>
+`;
