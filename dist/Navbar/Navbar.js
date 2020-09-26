@@ -24,9 +24,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
  * @param { String } props.title - Brand name
  */
 function Brand(props) {
-  return _react["default"].createElement("div", {
+  return /*#__PURE__*/_react["default"].createElement("div", {
     className: "navbar-brand"
-  }, _react["default"].createElement("a", {
+  }, /*#__PURE__*/_react["default"].createElement("a", {
     href: props.href ? props.href : '/',
     className: "navbar-item"
   }, props.title));
@@ -44,11 +44,11 @@ Brand.propTypes = {
  */
 
 function Dropdown(props) {
-  return _react["default"].createElement("div", {
+  return /*#__PURE__*/_react["default"].createElement("div", {
     className: "navbar-item has-dropdown is-hoverable"
-  }, _react["default"].createElement("a", {
+  }, /*#__PURE__*/_react["default"].createElement("a", {
     className: "navbar-link"
-  }, props.title), _react["default"].createElement("div", {
+  }, props.title), /*#__PURE__*/_react["default"].createElement("div", {
     className: "navbar-dropdown"
   }, props.children));
 }
@@ -64,7 +64,7 @@ Dropdown.propTypes = {
  */
 
 function End(props) {
-  return _react["default"].createElement("div", {
+  return /*#__PURE__*/_react["default"].createElement("div", {
     className: "navbar-end"
   }, props.children);
 }
@@ -79,7 +79,7 @@ End.propTypes = {
  */
 
 function Start(props) {
-  return _react["default"].createElement("div", {
+  return /*#__PURE__*/_react["default"].createElement("div", {
     className: "navbar-start"
   }, props.children);
 }
@@ -95,7 +95,7 @@ Start.propTypes = {
  */
 
 function Item(props) {
-  return _react["default"].createElement("a", {
+  return /*#__PURE__*/_react["default"].createElement("a", {
     href: props.href,
     className: "navbar-item ".concat(props.className)
   }, props.title);
@@ -112,7 +112,7 @@ Item.propTypes = {
  */
 
 function Navbar(props) {
-  return _react["default"].createElement("div", {
+  return /*#__PURE__*/_react["default"].createElement("div", {
     className: props.dark ? 'navbar is-dark' : 'navbar'
   }, props.children);
 }

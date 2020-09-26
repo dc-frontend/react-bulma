@@ -18,18 +18,18 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
  */
 function Breadcrumb(props) {
   if (props.active) {
-    return _react["default"].createElement("li", {
+    return /*#__PURE__*/_react["default"].createElement("li", {
       className: "is-active",
       key: "".concat(props.name, "-breadcrumb")
-    }, _react["default"].createElement("a", {
+    }, /*#__PURE__*/_react["default"].createElement("a", {
       href: "#",
       "aria-current": "page"
     }, props.name));
   }
 
-  return _react["default"].createElement("li", {
+  return /*#__PURE__*/_react["default"].createElement("li", {
     key: "".concat(props.name, "-breadcrumb")
-  }, _react["default"].createElement("a", {
+  }, /*#__PURE__*/_react["default"].createElement("a", {
     href: props.href
   }, props.name));
 }
@@ -45,10 +45,10 @@ Breadcrumb.propTypes = {
  */
 
 function Breadcrumbs(props) {
-  return _react["default"].createElement("nav", {
+  return /*#__PURE__*/_react["default"].createElement("nav", {
     className: "breadcrumb has-succeeds-separator",
     "aria-label": "breadcrumbs"
-  }, _react["default"].createElement("ul", null, props.children));
+  }, /*#__PURE__*/_react["default"].createElement("ul", null, props.children));
 }
 
 Breadcrumbs.propTypes = {

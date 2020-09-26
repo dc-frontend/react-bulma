@@ -9,6 +9,7 @@ export class Card extends React.Component {
   }
 
   getContentFragment (fragment) {
+    const classes = `card ${this.props.className}`
     const image = this.renderCardImage()
     const video = this.renderCardYoutubeVideo()
     const header = this.renderCardHeader()
@@ -17,7 +18,7 @@ export class Card extends React.Component {
 
     const fragments = {
       card: (
-        <div className='card'>
+        <div className={classes}>
           {image}
           {video}
           {header}
@@ -44,7 +45,7 @@ export class Card extends React.Component {
    * @returns {*}
    */
   render () {
-    if (typeof this.props.url !== 'undefined') {
+    if (typeof  url !== 'undefined') {
       return this.getContentFragment('linkCard')
     }
 
@@ -119,6 +120,7 @@ export class Card extends React.Component {
     return ''
   }
 }
+
 Card.propTypes = {
   children: PropTypes.any,
   /**

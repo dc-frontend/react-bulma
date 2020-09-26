@@ -17,7 +17,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
  * @param {*} props
  */
 function Columns(props) {
-  return _react["default"].createElement("div", {
+  return /*#__PURE__*/_react["default"].createElement("div", {
     className: "columns"
   }, props.children);
 }
@@ -32,7 +32,7 @@ Columns.propTypes = {
 
 function Column(props) {
   var classes = props["class"] ? "column ".concat(props["class"]) : 'column';
-  return _react["default"].createElement("div", {
+  return /*#__PURE__*/_react["default"].createElement("div", {
     className: classes
   }, props.children);
 }
