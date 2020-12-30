@@ -100,19 +100,27 @@ Start.propTypes = {
  * @param {*} props
  * @param { String } props.href - Link location.
  * @param { String } props.title - Link title.
+ * @param { String? } props.target - Link target.
  */
 
 function Item(props) {
-  return /*#__PURE__*/_react["default"].createElement("a", {
-    href: props.href,
-    className: "navbar-item ".concat(props.className)
-  }, props.title);
+  var itemProps = {
+    className: props.className ? "navbar-item ".concat(props.className) : 'navbar-item',
+    href: props.href
+  };
+
+  if (props.target) {
+    itemProps.target = props.target;
+  }
+
+  return /*#__PURE__*/_react["default"].createElement("a", itemProps, props.title);
 }
 
 Item.propTypes = {
-  title: _propTypes["default"].string.isRequired,
   className: _propTypes["default"].string,
-  href: _propTypes["default"].string.isRequired
+  href: _propTypes["default"].string.isRequired,
+  target: _propTypes["default"].string,
+  title: _propTypes["default"].string.isRequired
 };
 /**
  * Navbar
@@ -230,17 +238,10 @@ Start.__docgenInfo = {
   }
 };
 Item.__docgenInfo = {
-  "description": "Navbar Item\n@param {*} props\n@param { String } props.href - Link location.\n@param { String } props.title - Link title.",
+  "description": "Navbar Item\n@param {*} props\n@param { String } props.href - Link location.\n@param { String } props.title - Link title.\n@param { String? } props.target - Link target.",
   "methods": [],
   "displayName": "Item",
   "props": {
-    "title": {
-      "type": {
-        "name": "string"
-      },
-      "required": true,
-      "description": ""
-    },
     "className": {
       "type": {
         "name": "string"
@@ -249,6 +250,20 @@ Item.__docgenInfo = {
       "description": ""
     },
     "href": {
+      "type": {
+        "name": "string"
+      },
+      "required": true,
+      "description": ""
+    },
+    "target": {
+      "type": {
+        "name": "string"
+      },
+      "required": false,
+      "description": ""
+    },
+    "title": {
       "type": {
         "name": "string"
       },
