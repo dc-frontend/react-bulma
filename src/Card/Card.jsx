@@ -9,7 +9,7 @@ export class Card extends React.Component {
   }
 
   getContentFragment (fragment) {
-    const classes = `card ${this.props.className}`
+    const classes = this.props.className ? `card ${this.props.className}` : 'card'
     const image = this.renderCardImage()
     const video = this.renderCardYoutubeVideo()
     const header = this.renderCardHeader()

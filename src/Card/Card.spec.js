@@ -6,9 +6,25 @@ import { cleanup } from '@testing-library/react'
 
 afterEach(cleanup)
 
-test('It renders as expected', () => {
+test ('It has class of .card and class length of 1 by default', () => {
   const component = renderer.create(
     <Card></Card>
   )
-  expect(component.toJSON()).toMatchSnapshot()
+
+  const className = component.toJSON().props.className
+
+  expect(className).toContain('card')
+  expect(typeof className).toBe('string')
+})
+
+test ('It can have a className passed in (and retains card)', () => {
+  const component = renderer.create(
+    <Card className='test'></Card>
+  )
+
+  const className = component.toJSON().props.className
+
+  expect(typeof className).toBe('string')
+  expect(className).toContain('card')
+  expect(className).toContain('test')
 })
