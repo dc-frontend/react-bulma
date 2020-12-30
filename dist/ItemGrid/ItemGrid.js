@@ -90,9 +90,6 @@ var ItemGrid = /*#__PURE__*/function (_React$Component) {
         i++;
       }
 
-      console.log('typeof items', _typeof(items));
-      console.log('items', items);
-
       if (!Array.isArray(items)) {
         columns[0].items.push(this.props.children);
         return columns;

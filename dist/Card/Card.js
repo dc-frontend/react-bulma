@@ -54,7 +54,7 @@ var Card = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "getContentFragment",
     value: function getContentFragment(fragment) {
-      var classes = "card ".concat(this.props.className);
+      var classes = this.props.className ? "card ".concat(this.props.className) : 'card';
       var image = this.renderCardImage();
       var video = this.renderCardYoutubeVideo();
       var header = this.renderCardHeader();

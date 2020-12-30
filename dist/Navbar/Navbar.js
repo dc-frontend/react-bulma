@@ -22,19 +22,27 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
  * @param { Object } props
  * @param { String='/' } props.href - Location where the brand should link to
  * @param { String } props.title - Brand name
+ * @param { String } props.target - Link target
  */
 function Brand(props) {
+  var aProps = {
+    href: props.href ? props.href : '/',
+    className: 'navbar-item'
+  };
+
+  if (props.target) {
+    aProps.target = props.target;
+  }
+
   return /*#__PURE__*/_react["default"].createElement("div", {
     className: "navbar-brand"
-  }, /*#__PURE__*/_react["default"].createElement("a", {
-    href: props.href ? props.href : '/',
-    className: "navbar-item"
-  }, props.title));
+  }, /*#__PURE__*/_react["default"].createElement("a", aProps, props.title));
 }
 
 Brand.propTypes = {
   title: _propTypes["default"].string.isRequired,
-  href: _propTypes["default"].string
+  href: _propTypes["default"].string,
+  target: _propTypes["default"].string
 };
 /**
  * Dropdown
@@ -145,7 +153,7 @@ Navbar.__docgenInfo = {
 var _default = Navbar;
 exports["default"] = _default;
 Brand.__docgenInfo = {
-  "description": "Brand\n@param { Object } props\n@param { String='/' } props.href - Location where the brand should link to\n@param { String } props.title - Brand name",
+  "description": "Brand\n@param { Object } props\n@param { String='/' } props.href - Location where the brand should link to\n@param { String } props.title - Brand name\n@param { String } props.target - Link target",
   "methods": [],
   "displayName": "Brand",
   "props": {
@@ -157,6 +165,13 @@ Brand.__docgenInfo = {
       "description": ""
     },
     "href": {
+      "type": {
+        "name": "string"
+      },
+      "required": false,
+      "description": ""
+    },
+    "target": {
       "type": {
         "name": "string"
       },
