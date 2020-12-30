@@ -6,15 +6,25 @@ import PropTypes from 'prop-types'
  * @param { Object } props
  * @param { String='/' } props.href - Location where the brand should link to
  * @param { String } props.title - Brand name
+ * @param { String } props.target - Link target
  */
 export function Brand (props) {
+  const aProps = {
+    href: props.href ? props.href : '/',
+    className: 'navbar-item'
+  }
+  if (props.target) {
+    aProps.target = props.target
+  }
+
   return <div className='navbar-brand'>
-    <a href={props.href ? props.href : '/'} className='navbar-item'>{props.title}</a>
+    <a {...aProps}>{props.title}</a>
   </div>
 }
 Brand.propTypes = {
   title: PropTypes.string.isRequired,
-  href: PropTypes.string
+  href: PropTypes.string,
+  target: PropTypes.string
 }
 
 /**
