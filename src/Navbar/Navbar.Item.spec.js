@@ -12,6 +12,15 @@ test('Item has class name of navbar-item by default', () => {
   expect(json.props.className).toBe('navbar-item')
 })
 
+test('Item can have extra classNames passed in', () => {
+  const component = renderer.create(
+    <Item title='Testing Navbar Brand' href='/' className='test item' />
+  )
+
+  const json = component.toJSON()
+  expect(json.props.className).toBe('navbar-item test item')
+})
+
 test('Item does not have target property by default', () => {
   const component = renderer.create(
     <Item title='Testing Navbar Brand' href='/' />
@@ -27,7 +36,6 @@ test('Item can have target property set', () => {
   )
 
   const json = component.toJSON()
-  console.log(json)
   expect(json.props).toHaveProperty('target')
   expect(json.props.target).toBe('_blank')
 })
