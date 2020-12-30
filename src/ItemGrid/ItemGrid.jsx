@@ -7,7 +7,10 @@ export class ItemGrid extends React.Component {
   }
 
   columns () {
-    return this.props.columns || 3
+    if (this.props.columns) {
+      return parseInt(this.props.columns)
+    }
+    return 3
   }
 
   renderColumns (columns) {
@@ -64,20 +67,21 @@ export class ItemGrid extends React.Component {
   }
 
   title () {
-    return <h1>{this.props.title}</h1> || ''
+    if (!this.props.title) { return false }
+    return <h1>{this.props.title}</h1>
   }
 
   render () {
     let data = this.buildColumnizedListing()
     let title = this.title()
     let cols = this.renderColumns(data)
-    let outerClasses = 'item-grid '
-    if (typeof this.props.outerClasses !== 'undefined') {
-      outerClasses = outerClasses + this.props.outerClasses
+    let classes = 'item-grid'
+    if (typeof this.props.className !== 'undefined') {
+      classes = classes + ' ' + this.props.className
     }
 
     return (
-      <div className={outerClasses}>
+      <div className={classes}>
         {title}
         {cols}
       </div>
