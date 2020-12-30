@@ -45,9 +45,6 @@ export class ItemGrid extends React.Component {
       i++
     }
 
-    console.log('typeof items', typeof items)
-    console.log('items', items)
-
     if (!Array.isArray(items)) {
       columns[0].items.push(this.props.children)
       return columns
