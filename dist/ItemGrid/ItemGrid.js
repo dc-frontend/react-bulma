@@ -52,7 +52,11 @@ var ItemGrid = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "columns",
     value: function columns() {
-      return this.props.columns || 3;
+      if (this.props.columns) {
+        return parseInt(this.props.columns);
+      }
+
+      return 3;
     }
   }, {
     key: "renderColumns",
@@ -99,7 +103,7 @@ var ItemGrid = /*#__PURE__*/function (_React$Component) {
       items.forEach(function (item) {
         columns[column].items.push(item);
 
-        if (column === 2) {
+        if (column === colCount - 1) {
           column = 0;
         } else {
           column++;
@@ -110,7 +114,11 @@ var ItemGrid = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "title",
     value: function title() {
-      return /*#__PURE__*/_react["default"].createElement("h1", null, this.props.title) || '';
+      if (!this.props.title) {
+        return false;
+      }
+
+      return /*#__PURE__*/_react["default"].createElement("h1", null, this.props.title);
     }
   }, {
     key: "render",
@@ -118,14 +126,14 @@ var ItemGrid = /*#__PURE__*/function (_React$Component) {
       var data = this.buildColumnizedListing();
       var title = this.title();
       var cols = this.renderColumns(data);
-      var outerClasses = 'item-grid ';
+      var classes = 'item-grid';
 
-      if (typeof this.props.outerClasses !== 'undefined') {
-        outerClasses = outerClasses + this.props.outerClasses;
+      if (typeof this.props.className !== 'undefined') {
+        classes = classes + ' ' + this.props.className;
       }
 
       return /*#__PURE__*/_react["default"].createElement("div", {
-        className: outerClasses
+        className: classes
       }, title, cols);
     }
   }]);
