@@ -57,7 +57,7 @@ export class ItemGrid extends React.Component {
     items.forEach(item => {
       columns[column].items.push(item)
 
-      if (column === 2) {
+      if (column === (colCount - 1)) {
         column = 0
       } else {
         column++

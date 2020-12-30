@@ -63,6 +63,25 @@ test('It can be supplied a number of columns', () => {
   expect(columns.children.length).toBe(4)
 })
 
+test('It can have 1 or 2 columns', () => {
+  const component1 = renderer.create(
+    <ItemGrid columns={1}>
+      {itemList}
+    </ItemGrid>
+  )
+
+  const component2 = renderer.create(
+    <ItemGrid columns={2}>
+      {itemList}
+    </ItemGrid>
+  )
+
+  const json1 = component1.toJSON().children[0]
+  const json2 = component2.toJSON().children[0]
+  expect(json1.children.length).toBe(1)
+  expect(json2.children.length).toBe(2)
+})
+
 test('It can be supplied a number of columns as a string', () => {
   const component = renderer.create(
     <ItemGrid columns='6'>
