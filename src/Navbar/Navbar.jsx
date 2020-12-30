@@ -82,14 +82,24 @@ Start.propTypes = {
  * @param {*} props
  * @param { String } props.href - Link location.
  * @param { String } props.title - Link title.
+ * @param { String? } props.target - Link target.
  */
 export function Item (props) {
-  return <a href={props.href} className={`navbar-item ${props.className}`}>{props.title}</a>
+  let itemProps = {
+    className: props.className ? `navbar-item ${props.className}` : 'navbar-item',
+    href: props.href
+  }
+  if (props.target) {
+    itemProps.target = props.target
+  }
+
+  return <a {...itemProps}>{props.title}</a>
 }
 Item.propTypes = {
-  title: PropTypes.string.isRequired,
   className: PropTypes.string,
-  href: PropTypes.string.isRequired
+  href: PropTypes.string.isRequired,
+  target: PropTypes.string,
+  title: PropTypes.string.isRequired
 }
 
 /**
