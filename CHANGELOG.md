@@ -8,7 +8,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
  - [Card]
-   * Add ability to pass in an id.
+   * Add ability to pass in an id, defaults to undefined.
+
+ - [Navbar]
+   * Add ability to pass in an id, defaults to undefined.
 
 ## [1.0.14] - 2020-12-30
 ### Added
