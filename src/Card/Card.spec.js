@@ -29,6 +29,16 @@ test ('It can have a className passed in (and retains card)', () => {
   expect(className).toContain('test')
 })
 
+test('it does not have an id by default', () => {
+  const component = renderer.create(
+    <Card />
+  )
+
+  const id = component.toJSON().props.id
+
+  expect(typeof id).toBe("undefined")
+})
+
 test('it can be passed in an id to render on the component', () => {
   const cardId = 'myTestCard'
   const component = renderer.create(

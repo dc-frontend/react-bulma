@@ -107,11 +107,12 @@ Item.propTypes = {
  * @param {*} props
  */
 export function Navbar (props) {
-  return <div className={props.dark ? 'navbar is-dark' : 'navbar'}>
+  return <div  id={props.id ? props.id : undefined} className={props.dark ? 'navbar is-dark' : 'navbar'}>
     {props.children}
   </div>
 }
 Navbar.propTypes = {
+  id: PropTypes.string,
   children: PropTypes.any,
   dark: PropTypes.bool
 }
