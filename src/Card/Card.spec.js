@@ -28,3 +28,15 @@ test ('It can have a className passed in (and retains card)', () => {
   expect(className).toContain('card')
   expect(className).toContain('test')
 })
+
+test('it can be passed in an id to render on the component', () => {
+  const cardId = 'myTestCard'
+  const component = renderer.create(
+    <Card id={cardId}></Card>
+  )
+
+  const id = component.toJSON().props.id
+
+  expect(typeof id).toBe('string')
+  expect(id).toBe(cardId)
+})

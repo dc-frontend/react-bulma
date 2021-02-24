@@ -18,7 +18,7 @@ export class Card extends React.Component {
 
     const fragments = {
       card: (
-        <div className={classes}>
+        <div id={this.props.id ? this.props.id : undefined} className={classes}>
           {image}
           {video}
           {header}
