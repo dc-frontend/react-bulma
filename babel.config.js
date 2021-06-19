@@ -1,13 +1,14 @@
 // babel.config.js
-let NodeEnv = process.env.NODE_ENV
-let BabelIgnore = [
-  "__snapshots__/**"
+const NodeEnv = process.env.NODE_ENV
+const BabelIgnore = [
+  '__snapshots__/**'
 ]
 
-if (NodeEnv == 'test') {
+if (NodeEnv === 'test') {
+  // Do nothing
 } else {
-  BabelIgnore.push("**/*.test.js")
-  BabelIgnore.push("**/*.spec.js")
+  BabelIgnore.push('**/*.test.js')
+  BabelIgnore.push('**/*.spec.js')
 }
 
 module.exports = {
@@ -16,5 +17,5 @@ module.exports = {
     '@babel/preset-react'
   ],
   ignore: BabelIgnore,
-  plugins: ["react-docgen"]
-};
+  plugins: ['react-docgen']
+}

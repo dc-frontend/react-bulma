@@ -9,7 +9,7 @@ export default {
 }
 
 export const BreadcrumbStory = () => (
-  <div class="container">
+  <div className='container'>
     {
       contentWrapped(
         <>

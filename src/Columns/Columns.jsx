@@ -6,9 +6,11 @@ import PropTypes from 'prop-types'
  * @param {*} props
  */
 export function Columns (props) {
-  return <div className='columns'>
-    {props.children}
-  </div>
+  return (
+    <div className='columns'>
+      {props.children}
+    </div>
+  )
 }
 Columns.propTypes = {
   children: PropTypes.any
@@ -19,10 +21,12 @@ Columns.propTypes = {
  * @param {*} props
  */
 export function Column (props) {
-  const classes = props.class ? `column ${props.class}` : 'column'
-  return <div className={classes}>
-    {props.children}
-  </div>
+  const classes = props.className ? `column ${props.className}` : 'column'
+  return (
+    <div className={classes}>
+      {props.children}
+    </div>
+  )
 }
 Column.propTypes = {
   children: PropTypes.any,

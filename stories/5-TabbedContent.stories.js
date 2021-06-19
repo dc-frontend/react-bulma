@@ -9,15 +9,14 @@ export default {
 
 export const TabbedContentStory = () => (
   <>
-    <div class="container">
-      <div class="content">
+    <div className='container'>
+      <div className='content'>
         <h1>TabbedContent</h1>
 
         <p>Import:</p>
         <p><code>{`import { TabbedContent } from '@davidcraig/react-bulma'`}</code></p>
 
         <h2>Standard Example</h2>
-        
         <pre><code>{`<TabbedContent content={{
   tab1: { title: 'Tab 1', content: 'Hello from tab 1' },
   tab2: { title: 'Tab 2', content: 'Hello from tab 2' }

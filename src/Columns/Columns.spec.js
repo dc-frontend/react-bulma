@@ -20,7 +20,7 @@ test('It renders as expected', () => {
 test('Column can have custom class passed through', () => {
   const component = renderer.create(
     <Columns>
-      <Column class='is-one-third'>I am col 1</Column>
+      <Column className='is-one-third'>I am col 1</Column>
     </Columns>
   )
   expect(component.toJSON()).toMatchSnapshot()

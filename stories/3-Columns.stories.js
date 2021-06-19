@@ -8,8 +8,8 @@ export default {
 }
 
 export const ColumnStory = () => (
-  <div class="container">
-    <div class="content">
+  <div className='container'>
+    <div className='content'>
       <h1>Columns</h1>
 
       <p>Import:</p>
@@ -17,7 +17,7 @@ export const ColumnStory = () => (
 
       <h2>Standard Example</h2>
       <p>A standard wrapper around bulma Columns and Column, simple flexbox based grid.</p>
-      
+
       <pre><code>{`<Columns>
   <Column>Col 1 Content</Column>
   <Column>Col 2 Content</Column>
@@ -25,13 +25,29 @@ export const ColumnStory = () => (
 </Columns>`
 }</code></pre>
 
-    </div>
-
     <Columns>
       <Column>Col 1 Content</Column>
       <Column>Col 2 Content</Column>
       <Column>Col 3 Content</Column>
     </Columns>
+
+    <h2>With Sizes</h2>
+    <p>You can also pass extra className's for example with bulma you can use is-one-third, is-two-third is-one-quarter etc.</p>
+    <p>Any className you pass in will automatically be added to the underlying element.</p>
+    <pre><code>{`<Columns>
+      <Column className='is-one-quarter'>Col 1 Content</Column>
+      <Column className='is-one-quarter'>Col 2 Content</Column>
+      <Column className='is-one-half'>Col 3 Content</Column>
+    </Columns>`
+    }</code></pre>
+
+    <Columns>
+      <Column className='is-one-quarter'>Col 1 Content</Column>
+      <Column className='is-one-quarter'>Col 2 Content</Column>
+      <Column className='is-one-half'>Col 3 Content</Column>
+    </Columns>
+
+    </div>
   </div>
 )
 

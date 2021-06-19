@@ -10,7 +10,7 @@ export default {
 }
 
 export const CardStory = () => (
-  <div class="container">
+  <div className='container'>
     {
       contentWrapped(
         <>
@@ -25,12 +25,12 @@ export const CardStory = () => (
       )
     }
     <Columns>
-      <Column class='is-one-third'>
+      <Column className='is-one-third'>
         <Card title='Title' />
       </Column>
     </Columns>
-    
-    <br/>
+
+    <br />
     {
       contentWrapped(
         <>
@@ -40,7 +40,7 @@ export const CardStory = () => (
       )
     }
     <Columns>
-      <Column class='is-one-third'>
+      <Column className='is-one-third'>
         <Card title='Title' image='https://via.placeholder.com/500x180?text=placeholder' />
       </Column>
     </Columns>

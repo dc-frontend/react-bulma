@@ -10,8 +10,8 @@ export default {
 
 export const ItemGridStory = () => (
   <>
-    <div class="container">
-      <div class="content">
+    <div className="container">
+      <div className="content">
         <h1>ItemGrid</h1>
 
         <p>Import:</p>

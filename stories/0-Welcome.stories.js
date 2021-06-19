@@ -1,5 +1,4 @@
 import React from 'react'
-import { linkTo } from '@storybook/addon-links'
 import { Welcome } from '@storybook/react/demo'
 import 'bulma/css/bulma.css'
 
@@ -9,8 +8,8 @@ export default {
 }
 
 export const Installation = () => (
-  <div class="container">
-    <div class="content">
+  <div className='container'>
+    <div className='content'>
       <h1>Bulma-React Components</h1>
 
       <h2>Installation</h2>
