@@ -13,6 +13,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
  - [Navbar]
    * Add ability to pass in an id, defaults to undefined.
 
+### Changed
+
+ - [Column]
+   * Use className instead of class on Column component (breaking if using class already).
+
 ## [1.0.14] - 2020-12-30
 ### Added
 
